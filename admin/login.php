@@ -7,11 +7,11 @@ include_once '../includes/overall/header.php';
 <a href="<?php echo SITE_ROOT; ?>/index.php" class="link">&laquo; Return to Public Page</a>
 <h1 class="login">Login</h1>
 <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['login'])) {
-            User::instance()->login_validate(escape(trim($_POST['username'])), $_POST['password']);
-        }
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['login'])) {
+        User::instance()->login_validate(escape(trim($_POST['username'])), $_POST['password']);
+    } 
+}
 ?>
 <div class="login-form">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">

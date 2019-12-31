@@ -10,11 +10,13 @@ if (isset($_SESSION['success'])) {
     echo Session::instance()->flash('User successfully created', 'success', 'success');
 }
 
-if (isset($_POST['create'])) {
-    if (User::instance()->create_user(trim(escape($_POST['username'])), escape($_POST['password']))) {
-        $_SESSION['success'] = 'success';
-        Redirect::to($_SERVER['PHP_SELF']);
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	if (isset($_POST['create'])) {
+	    if (User::instance()->create_user(trim(escape($_POST['username'])), escape($_POST['password']))) {
+	        $_SESSION['success'] = 'success';
+	        Redirect::to($_SERVER['PHP_SELF']);
+	    }
+	}
 }
 ?>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
