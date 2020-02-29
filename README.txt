@@ -1,6 +1,6 @@
 GALLERY
 
-/* This is my third personal project. I used PHP OOP to build this from scratch. Its not the best looking site as regards to styling. I am more of a backend programmer, started delving into frontend. Hopefully with time, I would make it more presentable. */
+/* This is my third personal project. It is an image gallery that a user can upload their personal images, make certain images available for public viewing and could give his viewers opportunity to leave comments on the images. I used PHP OOP to build this from scratch. Its not the best looking site as regards to styling. I am more of a backend programmer, started delving into frontend. Hopefully with time, I would make it more presentable. */
 
 1. import the 'gallery.sql' to get you started. Database name used here is 'gallery' but you are free to change it in 'credentials/secure.php'. You could put in your personal database credentials here as well
 
